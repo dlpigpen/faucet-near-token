@@ -18,8 +18,7 @@ const DATA_ICON: &str = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBM
 
 #[near_bindgen]
 impl MDContract {
-
-     #[init]
+    #[init]
     pub fn new_default_meta(owner_id: AccountId, total_supply: U128) -> Self {
         Self::new(
             owner_id,
@@ -123,32 +122,30 @@ mod tests {
             .storage_usage(env::storage_usage())
             .attached_deposit(contract.storage_balance_bounds().min.into())
             .predecessor_account_id(accounts(1))
-            .build()
-        );
+            .build());
 
         contract.storage_deposit(None, None);
 
         testing_env!(context
-        .storage_usage(env::storage_usage())
-        .attached_deposit(1)
-        .predecessor_account_id(accounts(2))
-        .build()
-        );
+            .storage_usage(env::storage_usage())
+            .attached_deposit(1)
+            .predecessor_account_id(accounts(2))
+            .build());
 
         let transfer_amount = TOTAL_SUPPLY / 3;
         contract.ft_transfer(accounts(1), transfer_amount.into(), None);
 
-        testing_env!(
-            context
+        testing_env!(context
             .storage_usage(env::storage_usage())
             .account_balance(env::account_balance())
             .is_view(true)
             .attached_deposit(0)
-            .build()
+            .build());
+
+        assert_eq!(
+            contract.ft_balance_of(accounts(2)).0,
+            TOTAL_SUPPLY - transfer_amount
         );
-
-        assert_eq!(contract.ft_balance_of(accounts(2)).0, TOTAL_SUPPLY - transfer_amount);
         assert_eq!(contract.ft_balance_of(accounts(1)).0, transfer_amount);
-
     }
 }

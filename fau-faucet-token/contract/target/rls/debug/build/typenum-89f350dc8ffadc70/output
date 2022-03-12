@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/ducnguyen/Desktop/near/faucet-near-token/fau-faucet-token/contract/target/rls/debug/build/typenum-89f350dc8ffadc70/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/Users/ducnguyen/Desktop/near/faucet-near-token/fau-faucet-token/contract/target/rls/debug/build/typenum-89f350dc8ffadc70/out/op.rs

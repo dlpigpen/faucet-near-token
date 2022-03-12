@@ -1,1 +1,0 @@
-/Users/ducnguyen/Desktop/near/faucet-near-token/fau-faucet-token/contract/target/wasm32-unknown-unknown/debug/libgreeter.rlib: /Users/ducnguyen/Desktop/near/faucet-near-token/fau-faucet-token/contract/src/lib.rs
