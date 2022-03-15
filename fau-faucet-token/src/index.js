@@ -1,13 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { initContract } from './utils'
+import './global.css'
+import { StoreProvider } from './store'
 
-window.nearInitPromise = initContract()
-  .then(() => {
-    ReactDOM.render(
-      <App />,
-      document.querySelector('#root')
-    )
-  })
-  .catch(console.error)
+ReactDOM.render(
+  <StoreProvider>
+    <App />
+  </StoreProvider>,
+  document.querySelector('#root')
+);
