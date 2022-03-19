@@ -6,11 +6,13 @@ import './global.css'
 import { StoreProvider } from './store'
 
 ReactDOM.render(
-  <StoreProvider>
+  <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <StoreProvider>
+        <App />
+      </StoreProvider>
     </BrowserRouter>
-  </StoreProvider>
+  </React.StrictMode>
   ,
   document.querySelector('#root')
 );

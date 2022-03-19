@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import wrapnearIcon from "~/assets/imgs/w-NEAR-no-border.png";
 import nearIcon from "~/assets/imgs/brand-icon-near.png";
+import { useStore, actions } from '../store'
+import  getNearBalance  from '~utils/balances/fetchnear';
 
 function Wrapper() {
+    const [state, dispatch] = useStore()
+    const { nearBalance, wNearBalance } = state
+
+    useEffect(() => {
+        getNearBalance(dispatch)
+    }, []) // listen one time
+
     return (
         <div className="w3-container w3-content w3-card-2 w3-theme-l5 w3-round-medium" style={{ marginTop: '160px', maxWidth: '500px' }}>
             <div className="w3-row">
@@ -16,7 +25,7 @@ function Wrapper() {
             <div className="w3-row w3-section">
                 <div className="w3-content w3-margin-bottom">
                 <img src={nearIcon} alt="Avatar" className="w3-circle" style={{ width: '20px', marginRight: '10px' }} />
-                    <span>Balance: 0 <span className="w3-text-theme"><b>NEAR</b></span></span>
+                    <span>Balance: { nearBalance } <span className="w3-text-theme"><b>NEAR</b></span></span>
                 </div>
                 <div className="w3-col" style={{ width: '75%' }}>
                     <input className="w3-input w3-border w3-round" name='input' type='number'/>
@@ -31,7 +40,7 @@ function Wrapper() {
             <div className="w3-row w3-section">
                 <div className="w3-content w3-margin-bottom">
                     <img src={wrapnearIcon} alt="Avatar" className="w3-circle" style={{ width: '20px', marginRight: '10px' }} />
-                    <span>Balance: 0 <span className="w3-text-theme"><b>wNEAR</b></span></span>
+                    <span>Balance: { wNearBalance } <span className="w3-text-theme"><b>wNEAR</b></span></span>
                 </div>
 
                 <div className="w3-col" style={{ width: '75%' }}>
@@ -54,3 +63,4 @@ function Wrapper() {
 }
 
 export default Wrapper
+ 

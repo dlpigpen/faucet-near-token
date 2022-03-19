@@ -14,7 +14,6 @@ export const config = getConfig(env)
 
 export const near = new Near({
     keyStore: new keyStores.BrowserLocalStorageKeyStore(),
-    headers: {},
     ...config
 })
 

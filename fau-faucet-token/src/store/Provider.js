@@ -1,10 +1,10 @@
 import Context from './Context'
 import { useReducer } from 'react';
-import reducer, { initialState } from './reducer';
-import { IntlProvider } from 'react-intl';
+import reducer, { initState } from './reducer';
+import logger from '~utils/logger';
 
 function Provider({ children }) {
-    const [state, dispatch] = useReducer(initialState, reducer)
+    const [state, dispatch] = useReducer(logger(reducer), initState)
     return (
         <Context.Provider value={[state, dispatch]}>
             {children}

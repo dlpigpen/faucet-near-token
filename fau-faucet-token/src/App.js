@@ -8,14 +8,12 @@ import Wrapper from './pages/Wrapper'
 
 
 function App() {
-  const [state, dispatch] = useStore()
-  console.log(state);
-
   return (
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Wrapper />} />
+      <Route path="/" element={<Wrapper />} />
+        <Route path="/wrapper" element={<Wrapper />} />
       </Routes>
     </>
   )

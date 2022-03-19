@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navigation() {
 
@@ -14,30 +15,30 @@ function Navigation() {
                     <a className="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" onClick={callOpenNav}>
                         <i className="fa fa-bars"></i>
                     </a>
-                    <a href="/" className="w3-bar-item w3-button w3-padding-large w3-theme-d4">
+                    <Link to="/" className="w3-bar-item w3-button w3-padding-large w3-theme-d4">
                         <i className="fa fa-home w3-margin-right"></i>Nearile
-                    </a>
-                    <a href="#" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" tile="Swap">
+                    </Link>
+                    <Link to="/" className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" tile="Swap">
                         Swap
-                    </a>
-                    <a href="#" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    </Link>
+                    <Link to="/" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         Pools
-                    </a>
-                    <a href="#" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    </Link>
+                    <Link to="/" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         Staking
-                    </a>
-                    <a href="#" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    </Link>
+                    <Link to="/" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         Faucet
-                    </a>
-                    <a href="#" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    </Link>
+                    <Link to="/" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         NFTs
-                    </a>
-                    <a href="/wrapper" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    </Link>
+                    <Link to="/wrapper" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         Wrap NEAR
-                    </a>
-                    <a href="#" className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+                    </Link>
+                    <Link to="/" className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
                         <i className="fa fa-connectdevelop"></i>
-                    </a>
+                    </Link>
                 </div>
             </div>
 
