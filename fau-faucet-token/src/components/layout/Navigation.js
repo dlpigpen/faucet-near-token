@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { login, logout, wallet } from '~utils/near'
 
 function Navigation() {
 
@@ -36,9 +37,19 @@ function Navigation() {
                     <Link to="/wrapper" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         Wrap NEAR
                     </Link>
-                    <Link to="/" className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-                        <i className="fa fa-connectdevelop"></i>
-                    </Link>
+                    {
+                        // if logged in
+                        wallet.isSignedIn() ?
+                            <a href="#" className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-green" title="My Account" onClick={logout}>
+                                {wallet.getAccountId()}
+                            </a>
+                            :
+                            // if not login
+                            <a href="#" className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-green" title="My Account" onClick={login}>
+                                Login with NEAR
+                            </a>
+
+                    }
                 </div>
             </div>
 

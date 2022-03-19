@@ -4,3 +4,5 @@ export { default as StoreContext } from './Context';
 export * from './hooks'
 
 export * as actions from './actions'
+
+export * as constans from './constants'

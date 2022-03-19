@@ -1,8 +1,5 @@
-import { 
-    FETCH_NEAR_BALANCE_PENDING,
-    FETCH_NEAR_BALANCE_SUCCESS,
-    FETCH_NEAR_BALANCE_ERROR
-} from "./constants"
+
+import * as constants from './constants'
 
 const initState = {
    pending: false,
@@ -13,24 +10,24 @@ const initState = {
 
 function reducer(state, action) {
     switch(action.type) {
-        case FETCH_NEAR_BALANCE_PENDING:
+        case constants.FETCH_NEAR_BALANCE_PENDING:
             return {
                 ...state,
                 pending: true
             }
 
-        case FETCH_NEAR_BALANCE_SUCCESS:
+        case constants.FETCH_NEAR_BALANCE_SUCCESS:
             return {
                 ...state,
                 pending: false,
                 nearBalance: action.payload
             }
         
-        case FETCH_NEAR_BALANCE_ERROR:
+        case constants.FETCH_NEAR_BALANCE_ERROR:
             return {
                 ...state,
                 pending: false,
-                error: action.error
+                error: action.payload
             }
 
         default:

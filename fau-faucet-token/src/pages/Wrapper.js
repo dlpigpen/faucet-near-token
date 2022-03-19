@@ -2,14 +2,16 @@ import React, { useEffect } from 'react'
 import wrapnearIcon from "~/assets/imgs/w-NEAR-no-border.png";
 import nearIcon from "~/assets/imgs/brand-icon-near.png";
 import { useStore, actions } from '../store'
-import  getNearBalance  from '~utils/balances/fetchnear';
+import  { getNearBalance, getwNearBalance}  from '../utils/balances/fetchnear';
 
 function Wrapper() {
     const [state, dispatch] = useStore()
     const { nearBalance, wNearBalance } = state
-
+    
     useEffect(() => {
         getNearBalance(dispatch)
+        getwNearBalance(dispatch)
+
     }, []) // listen one time
 
     return (
