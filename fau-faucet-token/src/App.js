@@ -1,7 +1,11 @@
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom'
+
 import { useStore } from './store'
 import Navigation from './components/layout/Navigation'
+import Home from './pages/Home'
+import Wrapper from './pages/Wrapper'
+
 
 function App() {
   const [state, dispatch] = useStore()
@@ -9,8 +13,10 @@ function App() {
 
   return (
     <>
-    <Navigation />
-  
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Wrapper />} />
+      </Routes>
     </>
   )
 }

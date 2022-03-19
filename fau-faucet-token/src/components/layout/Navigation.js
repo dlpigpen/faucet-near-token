@@ -4,12 +4,10 @@ function Navigation() {
 
     const callOpenNav = (e) => {
         e.preventDefault();
-        console.log("call me");
         window.openNav();
     }
 
     return (
-        // Navbar
         <>
             <div className="w3-top">
                 <div className="w3-bar w3-theme-d5 w3-left-align w3-large">
@@ -34,7 +32,7 @@ function Navigation() {
                     <a href="#" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         NFTs
                     </a>
-                    <a href="#" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    <a href="/wrapper" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         Wrap NEAR
                     </a>
                     <a href="#" className="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
@@ -52,6 +50,7 @@ function Navigation() {
                 <a href="#" className="w3-bar-item w3-button w3-padding-large">Wrap NEAR</a>
             </div>
         </>
+
     )
 }
 

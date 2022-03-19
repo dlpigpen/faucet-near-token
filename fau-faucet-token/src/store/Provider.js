@@ -7,9 +7,7 @@ function Provider({ children }) {
     const [state, dispatch] = useReducer(initialState, reducer)
     return (
         <Context.Provider value={[state, dispatch]}>
-            <IntlProvider message={state.messages, state.locale}>
-                {children}
-            </IntlProvider>
+            {children}
         </Context.Provider>
     )
 }

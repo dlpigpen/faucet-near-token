@@ -1,19 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './global.css'
 import { StoreProvider } from './store'
 
 ReactDOM.render(
   <StoreProvider>
-    <App />
-  </StoreProvider>,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StoreProvider>
+  ,
   document.querySelector('#root')
 );
 
-window.openNav = function() {
+window.openNav = function () {
   var x = document.getElementById("navDemo");
-  
+
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else {

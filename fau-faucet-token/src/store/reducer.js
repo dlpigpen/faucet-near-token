@@ -1,4 +1,7 @@
+
 const initState = {
+    locale: 'vi',
+    messages: [],
 
 }
 
