@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import { Routes, Route } from 'react-router-dom'
 
-import { useStore } from './store'
 import Navigation from './components/layout/Navigation'
-import Home from './pages/Home'
+import Footer from './components/layout/Footer'
 import Wrapper from './pages/Wrapper'
-
 
 function App() {
   return (
@@ -15,6 +13,7 @@ function App() {
       <Route path="/" element={<Wrapper />} />
         <Route path="/wrapper" element={<Wrapper />} />
       </Routes>
+      <Footer />
     </>
   )
 }

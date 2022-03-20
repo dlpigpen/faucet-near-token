@@ -49,7 +49,7 @@ function Wrapper() {
     }, []) // listen one time
 
     return (
-        <div className="w3-display-topmiddle w3-card-2 w3-theme-l5 w3-round-large w3-padding" style={{ marginTop: '160px', minWidth: '420px', maxWidth: '500px' }}>
+        <div className="w3-display-topmiddle w3-container w3-card-2 w3-theme-l5 w3-round-large w3-padding" style={{ marginTop: '160px', minWidth: '420px', maxWidth: '500px' }}>
             <div className="w3-row">
                 <h2 className="w3-center">Wrapper Near</h2>
             </div>
