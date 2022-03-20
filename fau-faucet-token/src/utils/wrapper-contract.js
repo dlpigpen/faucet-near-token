@@ -6,7 +6,9 @@ import {
     execTransactions,
 
     FT_STORAGE_AMOUNT,
-    ONE_YOCTO_NEAR
+    ONE_YOCTO_NEAR,
+
+    parseTokenWithDecimals
 
 } from "./near"
 
@@ -20,7 +22,7 @@ const wrapNearContract = new Contract(
 )
 
 const depositNear = async (amount) => {
-    let depositNear = Transaction = {
+    let depositNear = {
         receiverId: config.WRAP_NEAR_CONTRACT,
         functionCalls: [
             {
@@ -57,15 +59,17 @@ const depositNear = async (amount) => {
         transactions.unshift(stakingDepositStorage)
     }
 
+    console.log(transactions)
     await execTransactions(transactions)
 }
 
 const withdrawNear = async (amount) => {
     //@ts-ignore
     await wrapNearContract.near_withdraw(
-      { amount: parseNearAmount(amount.toString()) },
-      30000000000000,
-      1
+      { 
+          amount: amount.toString() },
+        30000000000000,
+        1
     );
 }
 
