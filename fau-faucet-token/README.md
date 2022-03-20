@@ -22,12 +22,12 @@ Features:
 Technology 
 ======
 
-1. [Near-sdk-rs]: https://github.com/near/near-sdk-rs
-2. [near-api-js]: https://github.com/near/near-api-js/
-3. [ReactJs]: https://reactjs.org/
-4. [W3.CSS]:https://www.w3schools.com/w3css/
-5. Combile and intergrate with React native reducer
-6. [Ant]:https://ant.design/
+[Near-sdk-rs]: https://github.com/near/near-sdk-rs
+[near-api-js]: https://github.com/near/near-api-js/
+[ReactJs]: https://reactjs.org/
+[W3.CSS]:https://www.w3schools.com/w3css/
+Combile and intergrate with React native reducer
+[Ant]:https://ant.design/
 
 Demo page
 ======
