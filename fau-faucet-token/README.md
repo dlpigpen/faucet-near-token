@@ -16,32 +16,36 @@ Features:
 6. NFT minting 
 7. API Near caller
 
-... any future please requet to the issue listing board or contact to me directly. Thanks
+... any future please create an issue. I'll take it and develop if it's in my ability. Thanks!
 
 
 Technology 
 ======
 
-[Near-sdk-rs]: https://github.com/near/near-sdk-rs
-[near-api-js]: https://github.com/near/near-api-js/
-[ReactJs]: https://reactjs.org/
-[W3.CSS]:https://www.w3schools.com/w3css/
-Combile and intergrate with React native reducer
-[Ant]:https://ant.design/
+Name  | Link
+------------- | -------------
+Near-sdk-rs  | https://github.com/near/near-sdk-rs
+near-api-js  | https://github.com/near/near-api-js/
+ReactJs  | https://reactjs.org/
+W3.CSS  | https://www.w3schools.com/w3css/
+Reducer  | https://reactjs.org/docs/hooks-reference.html#usereducer
+Ant | https://ant.design/
 
 Demo page
 ======
 
+[Link Demo](https://t.me/mitsori)
+
 Wrapp Near functions:
 
-![Settings Window](https://raw.github.com/ryanmaxwell/iArrived/master/Screenshots/Settings.png)
+![WrapNearScreen](https://github.com/dlpigpen/faucet-near-token/blob/main/fau-faucet-token/screenshots/wrapper.near.png?raw=true)
 
 Contact Me
 ===============
 
 My name's MD, a Vietnamese developer. I used a mobile developer for many years but now i love blockchain, i am moving and learning everyday to help the world with new technoly. Please reach me two links bellow:
 
-  [Telegram]: https://t.me/mitsori
-  [Discord]: https://discordapp.com/users/546871072339918861
+- [Telegram](https://t.me/mitsori)
+- [Discord](https://discordapp.com/users/546871072339918861)
 
   
