@@ -31,7 +31,7 @@ function Navigation() {
                     <Link to="/" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         Faucet
                     </Link>
-                    <Link to="/" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    <Link to="/faucet" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         NFTs
                     </Link>
                     <Link to="/wrapper" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
@@ -53,12 +53,12 @@ function Navigation() {
                 </div>
 
                 <div id="navDemo" className="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-                    <a href="#" className="w3-bar-item w3-button w3-padding-large">Swap</a>
-                    <a href="#" className="w3-bar-item w3-button w3-padding-large">Pools</a>
-                    <a href="#" className="w3-bar-item w3-button w3-padding-large">Staking</a>
-                    <a href="#" className="w3-bar-item w3-button w3-padding-large">Faucet</a>
-                    <a href="#" className="w3-bar-item w3-button w3-padding-large">NFTs</a>
-                    <a href="#" className="w3-bar-item w3-button w3-padding-large">Wrap NEAR</a>
+                    <Link to="#" className="w3-bar-item w3-button w3-padding-large">Swap</Link>
+                    <Link to="#" className="w3-bar-item w3-button w3-padding-large">Pools</Link>
+                    <Link to="#" className="w3-bar-item w3-button w3-padding-large">Staking</Link>
+                    <Link to="/faucet" className="w3-bar-item w3-button w3-padding-large">Faucet</Link>
+                    <Link to="#" className="w3-bar-item w3-button w3-padding-large">NFTs</Link>
+                    <Link to="/wrapper" className="w3-bar-item w3-button w3-padding-large">Wrap NEAR</Link>
                 </div>
 
             </div>
