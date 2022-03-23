@@ -7,7 +7,6 @@ import { getNearBalance, getwNearBalance } from '../utils/balances/fetchnear';
 
 import { SwapOutlined } from "@ant-design/icons";
 import { Divider } from "antd";
-import 'antd/dist/antd.css';
 
 import {depositNear, withdrawNear, wrapNearContract} from "~utils/wrapper-contract";
 import {formatNumber, parseTokenAmount, parseTokenWithDecimals, wallet} from "~utils/near";
