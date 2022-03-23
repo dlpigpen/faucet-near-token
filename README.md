@@ -34,7 +34,7 @@ Ant | https://ant.design/
 Demo page
 ======
 
-[Link Demo](https://t.me/mitsori)
+[Link Demo](https://nearile.netlify.app/)
 
 Wrapp Near functions:
 
