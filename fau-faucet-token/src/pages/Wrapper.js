@@ -3,7 +3,7 @@ import wrapnearIcon from "~/assets/imgs/w-NEAR-no-border.png";
 import nearIcon from "~/assets/imgs/brand-icon-near.png";
 
 import { useStore, actions } from '../store'
-import { getNearBalance, getwNearBalance } from '../utils/balances/fetchnear';
+import { getNearBalance, getwNearBalance } from '../utils/fetchnear';
 
 import { SwapOutlined } from "@ant-design/icons";
 import { Divider } from "antd";

@@ -1,28 +1,23 @@
 import {
-    useStore,
     actions,
-} from '../../store'
+} from '../store'
 
 import {
-    formatmatNumber,
-    parseTokenAmount,
     parseTokenWithDecimals,
     wallet
 } from "~utils/near"
 
 
 import {
-    depositNear,
-    withdrawNear,
     wrapNearContract
-} from '../wrapper-contract'
+} from './wrapper-contract'
 
 export async function getNearBalance(dispatch) {
     if (wallet.isSignedIn()) {
         // pending get near balance
         try {
             // dispatch(actions.FETCH_NEAR_BALANCE_PENDING_ACTION())
-
+ 
             // get near balance
             const balance = await wallet.account().getAccountBalance();
             const availableBalance = parseTokenWithDecimals(balance.available, 24)

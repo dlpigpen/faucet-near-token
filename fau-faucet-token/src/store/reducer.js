@@ -9,6 +9,11 @@ const initState = {
     wNearBalance: '0',
     inputNearBalance: '0',
     isWrap: true,
+
+    faucetMDInfo: {},
+    totalMDBalance: '0',
+    totalMDInAccount: '0',
+    inputRequestClaimMD: '0'
 }
 
 function reducer(state, action) {
@@ -33,7 +38,7 @@ function reducer(state, action) {
                 pending: false,
                 error: action.payload
             }
-            
+
 
         // wNearBalance
         case constants.FETCH_WNEAR_BALANCE_PENDING:
@@ -70,6 +75,36 @@ function reducer(state, action) {
                 ...state,
                 isWrap: action.payload,
                 inputNearBalance: '0'
+            }
+
+
+        // get total md balance 
+        case constants.FETCH_TOTAL_MD_BALANCE_SUCESS:
+            return {
+                ...state,
+                totalMDBalance: action.payload,
+            }
+
+        // fetch faucet md info info
+        case constants.FETCH_MD_FAUCET_INFO_SUCCESS:
+            return {
+                ...state,
+                faucetMDInfo: action.payload,
+            }
+
+        // fetch md token in an account
+        case constants.FETCH_TOTAL_ACCOUNT_MD_BALANCE_SUCESS:
+            return {
+                ...state,
+                totalMDInAccount: action.payload,
+            }
+
+        // update request claim input 
+        case constants.SET_INPUT_REQUEST_CLAIM_MD:
+            let nMDRequest = String(Number(action.payload));
+            return {
+                ...state,
+                inputRequestClaimMD: nMDRequest,
             }
 
         default:
