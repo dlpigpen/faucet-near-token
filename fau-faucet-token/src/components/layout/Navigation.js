@@ -28,10 +28,10 @@ function Navigation() {
                     <Link to="/" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         Staking
                     </Link>
-                    <Link to="/" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    <Link to="/faucet" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         Faucet
                     </Link>
-                    <Link to="/faucet" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
+                    <Link to="/nft" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
                         NFTs
                     </Link>
                     <Link to="/wrapper" className="w3-bar-item w3-button w3-button w3-hide-small w3-padding-large w3-hover-white">
@@ -57,7 +57,7 @@ function Navigation() {
                     <Link to="#" className="w3-bar-item w3-button w3-padding-large">Pools</Link>
                     <Link to="#" className="w3-bar-item w3-button w3-padding-large">Staking</Link>
                     <Link to="/faucet" className="w3-bar-item w3-button w3-padding-large">Faucet</Link>
-                    <Link to="#" className="w3-bar-item w3-button w3-padding-large">NFTs</Link>
+                    <Link to="/nft" className="w3-bar-item w3-button w3-padding-large">NFTs</Link>
                     <Link to="/wrapper" className="w3-bar-item w3-button w3-padding-large">Wrap NEAR</Link>
                 </div>
 
