@@ -35,16 +35,20 @@ impl MDContract {
         )
     }
 
+       /// Initializes the contract with the given total supply owned by the given `owner_id` with
+    /// the given fungible token metadata.
     #[init]
-    pub fn new(owner_id: AccountId, total_supply: U128, metadata: FungibleTokenMetadata) -> Self {
+    pub fn new(
+        owner_id: AccountId,
+        total_supply: U128,
+        metadata: FungibleTokenMetadata,
+    ) -> Self {
         assert!(!env::state_exists(), "Already initialized");
         metadata.assert_valid();
-
         let mut this = Self {
             token: FungibleToken::new(b"a".to_vec()),
             metadata: LazyOption::new(b"m".to_vec(), Some(&metadata)),
         };
-
         this.token.internal_register_account(&owner_id);
         this.token.internal_deposit(&owner_id, total_supply.into());
         near_contract_standards::fungible_token::events::FtMint {
@@ -53,7 +57,6 @@ impl MDContract {
             memo: Some("Initial tokens supply is minted"),
         }
         .emit();
-
         this
     }
 
@@ -68,6 +71,7 @@ impl MDContract {
 
 near_contract_standards::impl_fungible_token_core!(MDContract, token, on_tokens_burned);
 near_contract_standards::impl_fungible_token_storage!(MDContract, token, on_account_closed);
+
 
 #[near_bindgen]
 impl FungibleTokenMetadataProvider for MDContract {
