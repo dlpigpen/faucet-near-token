@@ -54,7 +54,7 @@ export const execTransactions = async (
                     fc.methodName,
                     fc.args,
                     getGas(fc.gas),
-                    fc.amount
+                    getAmount(fc.amount)
                 )
                 )
             })

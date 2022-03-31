@@ -33,15 +33,14 @@ const faucet = async (amount) => {
             {
                 methodName: 'faucet_token',
                 args: { amount },
-                gas: "60000000000000",
+                gas: 6_000_000_000_000,
                 amount: FT_STORAGE_AMOUNT,
             }
         ]
     }
 
-
     let transactions = [faucetCall]
-
+    
     let storageBalance = await mdContract.storage_balance_of({ account_id: wallet.getAccountId() });
     if (!storageBalance) {
         let stakingDepositStorage = {
@@ -56,9 +55,9 @@ const faucet = async (amount) => {
             ]
         };
         transactions.unshift(stakingDepositStorage);
-        console.log(transactions);
-        await execTransactions(transactions)
     }
+    console.log(transactions);
+    await execTransactions(transactions)
 }
 
 export {

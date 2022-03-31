@@ -62,7 +62,6 @@ function Faucet() {
             <div className="w3-panel w3-card-4 w3-round-large">
                 <div className="w3-row w3-padding">
                     <div className="w3-content">
-                        <img src={nearIcon} alt="Avatar" className="w3-circle" style={{ width: '20px', marginRight: '10px' }} />
                         <span>Balance:
                             <button className="w3-btn w3-hover-off"
                                 style={{ textDecoration: 'underline', paddingLeft: '4px', paddingRight: '4px', marginBottom: '4px' }}
@@ -93,7 +92,7 @@ function Faucet() {
                     />
                 </div>
                 <div className="w3-content">
-                    <p>One account can get max { faucetMDInfo.max_shared_per_account } MD. </p>
+                    <p>One account can get max { faucetMDInfo.max_shared_per_account } MD each time. </p>
                 </div>
 
                 <div className="w3-content">
@@ -121,7 +120,7 @@ function Faucet() {
                     <div className="w3-round w3-theme-l5">
                         <div className="w3-container w3-center">
                             <span className="w3-opacity w3-col"> Total MD Shared</span>
-                            <span className="w3-text-black w3-medium w3-col"> { faucetMDInfo.total_balance_share }  <span> MD</span></span>
+                            <span className="w3-text-black w3-medium w3-col"> { faucetMDInfo.total_shared }  <span> MD</span></span>
                         </div>
                     </div>
 

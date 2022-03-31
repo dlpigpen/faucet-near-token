@@ -64,16 +64,15 @@ export const getMDTokenInfo = async (dispatch) => {
         try {
             const faucetInfo = await mdFaucetContract.get_faucet_info();
             const decimals = getTokenMetadata().decimals
-            console.log(faucetInfo)
+            
             const faucetInfoProcess = {
                 is_paused: faucetInfo.is_paused,
-                max_shared_per_account: formatNumber(parseTokenWithDecimals(faucetInfo.max_shared_per_account, decimals)),
-                total_account_shared: formatNumber(parseTokenWithDecimals(faucetInfo.total_account_shared, decimals)),
+                max_shared_per_account: formatNumber(parseTokenWithDecimals(faucetInfo.max_share_per_account, decimals)),
+                total_account_shared: faucetInfo.total_account_shared,
                 total_balance_share: formatNumber(parseTokenWithDecimals(faucetInfo.total_balance_share, decimals)),
                 total_shared: formatNumber(parseTokenWithDecimals(faucetInfo.total_shared, decimals)),
                 decimals: decimals
             }
-
             dispatch(actions.FETCH_MD_FAUCET_INFO_SUCCESS_ACTION(faucetInfoProcess))
         } catch (err) {
             console.log("getMDTokenInfo:: " + String(err.message)) 
