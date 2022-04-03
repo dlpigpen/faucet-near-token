@@ -13,10 +13,16 @@ const initState = {
     faucetMDInfo: {},
     totalMDBalance: '0',
     totalMDInAccount: '0',
-    inputRequestClaimMD: '0'
+    inputRequestClaimMD: '0',
+
+    nft_tokens_for_owner: '',
+    total_nft_supply: 0,
+
 }
 
 function reducer(state, action) {
+    console.log(action)
+
     switch (action.type) {
         // near
         case constants.FETCH_NEAR_BALANCE_PENDING:
@@ -107,6 +113,20 @@ function reducer(state, action) {
                 inputRequestClaimMD: nMDRequest,
             }
 
+        // update request claim input 
+        case constants.FETCH_NFT_TOKENS_FOR_OWNER:
+            return {
+                ...state,
+                nft_tokens_for_owner: action.payload,
+            }
+
+        case constants.FETCH_TOTAL_NFT_SUPPLY:
+            return {
+                ...state,
+                total_nft_supply: action.payload,
+            }
+
+
         default:
             return state;
     }
@@ -114,4 +134,3 @@ function reducer(state, action) {
 
 export { initState }
 export default reducer
-

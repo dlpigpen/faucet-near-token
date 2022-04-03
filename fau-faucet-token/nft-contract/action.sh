@@ -25,4 +25,4 @@ export NEAR_ENV=$NETWORK
 # near call $CONTRACT_ACC nft_transfer_call '{"receiver_id": "'$MASTER_ACC2'", "token_id": "token-2", "msg": "foo"}' --accountId $MASTER_ACC --depositYocto 1 --gas 200000000000000
 
 near view $CONTRACT_ACC nft_tokens_for_owner '{"account_id": "'$MASTER_ACC'", "limit": 5}'
-near view $CONTRACT_ACC nft_tokens_for_owner '{"account_id": "'$MASTER_ACC2'", "limit": 5}'
+# near view $CONTRACT_ACC nft_tokens_for_owner '{"account_id": "'$MASTER_ACC2'", "limit": 5}'
