@@ -25,3 +25,5 @@ export NEAR_ENV=$NETWORK
 near call $CONTRACT_ACC ft_transfer '{"receiver_id": "mitsori2.testnet", "amount": "10000000000000"}' --accountId $MASTER_ACC --amount 0.000000000000000000000001
 # near view $CONTRACT_ACC ft_balance_of '{"account_id": "mitsori2.testnet"}'
 # near view dnft.mitsori1.testnet ft_balance_of '{"account_id": "mitsori2.testnet"}
+
+

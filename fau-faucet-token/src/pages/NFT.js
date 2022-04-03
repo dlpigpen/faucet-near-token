@@ -1,4 +1,6 @@
 import React from 'react'
+import NFTSvg from "~/assets/imgs/nft.svg";
+import { Image } from 'antd';
 
 function NFT() {
     return (
@@ -10,12 +12,19 @@ function NFT() {
                 <h6 className="w3-theme-light">MD NFT is the top collection on Near. The owner whose the ownership of MD NFT is the richest in the world.</h6>
             </div>
 
+
+            <div className="w3-row">
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <NFTSvg height={380} width={280} />
+                </div>
+            </div>
+
             <p className="w3-center">
                 <button
                     className="w3-button w3-section w3-block w3-ripple w3-theme-d4 w3-round w3-large"
                     style={{ height: '50px' }}
                 >
-                    Submit
+                    0/1 Minted
                 </button>
             </p>
         </div>
