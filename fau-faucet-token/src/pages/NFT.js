@@ -63,7 +63,7 @@ function NFT() {
             </p>
 
             <p>
-                You can view your NFT collections at the link: <a href="https://wallet.testnet.near.org/?tab=collectibles">View MD NFT</a>
+                You can view your NFT collections at the link: <a href="https://wallet.testnet.near.org/?tab=collectibles" target="_blank">View MD NFT</a>
             </p>
         </div>
     )
