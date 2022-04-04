@@ -33,7 +33,7 @@ const faucet = async (amount) => {
             {
                 methodName: 'faucet_token',
                 args: { amount },
-                gas: 6_000_000_000_000,
+                gas: 100_000_000_000_000,
                 amount: FT_STORAGE_AMOUNT,
             }
         ]
@@ -49,7 +49,7 @@ const faucet = async (amount) => {
                 {
                     methodName: "storage_deposit",
                     args: { account_id: wallet.getAccountId() },
-                    gas: 10_000_000_000_000,
+                    gas: 100_000_000_000_000,
                     amount: FT_STORAGE_AMOUNT
                 }
             ]

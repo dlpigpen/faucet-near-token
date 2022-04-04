@@ -8,24 +8,30 @@ TOKEN_ACC=dnft.$MASTER_ACC
 
 export NEAR_ENV=$NETWORK
 
-# ## delete acc
+## delete acc
 # near delete $CONTRACT_ACC $MASTER_ACC
 
-# # ## create acc
-near create-account $CONTRACT_ACC --masterAccount $MASTER_ACC --initialBalance 20
+# ## create acc
+# near create-account $CONTRACT_ACC --masterAccount $MASTER_ACC --initialBalance 20
 
-# # #
-# # ## ## redeploy code only
-near deploy $CONTRACT_ACC --wasmFile ../../out/faucet-md-ft.wasm \
- --accountId $MASTER_ACC \
- --networkId $NETWORK \
- --initFunction "new" \
- --initArgs '{"owner_id": "'$OWNER'", "ft_contract_id": "dnft.mitsori1.testnet", "max_share":"1000000000"}' \
- --accountId $OWNER
+# #
+# ## ## redeploy code only
+# near deploy $CONTRACT_ACC --wasmFile ../../out/faucet-md-ft.wasm \
+#  --accountId $MASTER_ACC \
+#  --networkId $NETWORK \
+#  --initFunction "new" \
+#  --initArgs '{"owner_id": "'$OWNER'", "ft_contract_id": "dnft.mitsori1.testnet", "max_share":"1000000000"}' \
+#  --accountId $OWNER
 
-near state $MASTER_ACC
+# near deploy $CONTRACT_ACC --wasmFile ../../out/faucet-md-ft.wasm \
+#  --networkId $NETWORK \
+#  --initFunction "migrate_state" \
+#  --initArgs '{}' \
+#  --accountId $OWNER
 
-near view $CONTRACT_ACC get_faucet_info --accountId $SUB_MASTER_ACC
+# near state $MASTER_ACC
+
+# near view $CONTRACT_ACC get_faucet_info --accountId $SUB_MASTER_ACC
 
 
 # near call $CONTRACT_ACC update_max_share '{"max_share": "1100000000"}' --accountId $MASTER_ACC
